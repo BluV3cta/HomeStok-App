@@ -1,0 +1,10 @@
+{
+  "name": "StockPilot - Know what you have. Know what to buy. ",
+  "description": "Smart grocery budget tracker and store price comparator for Ghana. Track stock, compare prices across Melcom, Dominion, Paga Focus and local markets, scan receipts with AI, and reconcile spending.",
+  "requestFramePermissions": [
+    "camera"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

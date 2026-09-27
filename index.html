@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>StockPilot - Grocery Price & Budget Tracker</title>
+    <meta name="description" content="StockPilot - Smart grocery budget tracker and store price comparator. Track stock, compare prices across stores, scan receipts with AI, and reconcile spending." />
+    <meta property="og:title" content="StockPilot - Grocery Price & Budget Tracker" />
+    <meta property="og:description" content="StockPilot - Smart grocery budget tracker and store price comparator. Track stock, compare prices across stores, scan receipts with AI, and reconcile spending." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="StockPilot" />
+    <meta name="theme-color" content="#10b981" />
+    <script>
+      (function() {
+        try {
+          var saved = localStorage.getItem('stockpilot_dark_mode');
+          var isDark = saved !== null ? saved === 'true' : (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+          if (isDark) {
+            document.documentElement.classList.add('dark');
+            document.documentElement.style.colorScheme = 'dark';
+          } else {
+            document.documentElement.classList.remove('dark');
+            document.documentElement.style.colorScheme = 'light';
+          }
+        } catch (e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen antialiased select-none selection:bg-emerald-500 selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+
